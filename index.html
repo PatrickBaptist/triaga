@@ -1,123 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triaga - Experiências Digitais</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/jpg" href="./assets/SITE_150X150[1].jpg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIAGA - Conectando Propósito e Marcas</title>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets/SITE_150X150[1].jpg"
+    />
     <meta name="theme-color" content="#6659b0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body>
-  <div class="cursor"></div>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    ></script>
+  </head>
+  <body class="animated-bg">
+    <div class="cursor"></div>
 
-  <button class="menu-button"> 
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="nav-background"></div>  
-  <nav class="nav-wrapper">
-      <div class="nav-menu">
-          <a href="#inicio" class="nav-link">Início</a>
-          <a href="#proposito" class="nav-link">Propósito</a>
-          <a href="#servicos" class="nav-link">Serviços</a>
-          <a href="#cases" class="nav-link">Cases</a>
-          <a href="#parceiros" class="nav-link">Parceiros</a>
-          <a href="#depoimentos" class="nav-link">Depoimentos</a>
-          <a href="#contato" class="nav-link">Contato</a>
-      </div>
-  </nav>
-
-  <section class="hero-main" id="inicio">
-      <div class="hero-content-main">
-          <h1>Experiências Digitais Premium</h1>
-          <p>Transformando momentos em memórias inesquecíveis</p>
-      </div>
-      <div class="floating-cards">
-        <div class="card" style="--rotation: 15deg"></div>
-        <div class="card" style="--rotation: -10deg"></div>
-        <div class="card" style="--rotation: 5deg"></div>
-        <div class="card" style="--rotation: 15deg"></div>
-        <div class="card" style="--rotation: -10deg"></div>
-    </div>
-  </section>
-
-    <section class="hero" id="proposito">
-        <div class="hero-content">
-            <h1>Experiências Digitais Premium</h1>
-            <p>Transformando momentos em memórias inesquecíveis</p>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+            <img src="./assets//SITE_150X150[1].jpg" alt="Agência Triaga">
+            </div>
+            <a href="#contato" class="btn-contact">
+                <span>ENTRAR EM CONTATO</span>
+            </a>
         </div>
+    </header>
+
+    <section class="hero">
+      <h1>Bem-vindo à <span class="highlight-triaga">TRIAGA</span></h1>
+      <p>
+        Transformando ideias em impacto com criatividade, inclusão e propósito.
+      </p>
+      <a href="#purpose-section"><button class="cta-button">Conheça nossa história</button></a>
     </section>
 
-  <section class="services" id="servicos">
+    <div class="divider-gradient"></div>
+
+    <section class="section services">
+      <h2>O que Fazemos</h2>
       <div class="service-grid">
-          <div class="service-item">
-              <h3>Estratégia Digital</h3>
-              <p>Desenvolvimento de estratégias personalizadas para sua marca</p>
-          </div>
-          <div class="service-item">
-              <h3>Design Criativo</h3>
-              <p>Criação de experiências visuais únicas e memoráveis</p>
-          </div>
-          <div class="service-item">
-              <h3>Desenvolvimento Web</h3>
-              <p>Websites modernos com foco em performance e experiência</p>
-          </div>
+        <div class="service-card">
+          <h3>Captação de Patrocínio</h3>
+          <p>Conectamos marcas a projetos que geram valor social e cultural.</p>
+        </div>
+        <div class="service-card">
+          <h3>Marketing de Influência</h3>
+          <p>Alavancamos campanhas com criadores autênticos e relevantes.</p>
+        </div>
+        <div class="service-card">
+          <h3>Conteúdo Criativo</h3>
+          <p>Produzimos narrativas visuais que emocionam e engajam.</p>
+        </div>
+        <div class="service-card">
+          <h3>Ativações de Marca</h3>
+          <p>
+            Experiências únicas para colocar sua marca no centro da conversa.
+          </p>
+        </div>
       </div>
-  </section>
+    </section>
 
-    <section class="hero" id="cases">
-        <div class="hero-content">
-            <h1>Experiências Digitais Premium</h1>
-            <p>Transformando momentos em memórias inesquecíveis</p>
+    <div class="divider-gradient"></div>
+
+    <section class="purpose-section" id="purpose-section">
+      <h2>Nosso <span class="highlight-triaga">Propósito</span></h2>
+      <p>
+        Nascemos da lenda da Triaga, o antídoto que curava venenos com uma
+        mistura única de ingredientes. Hoje, usamos essa mesma alquimia para
+        transformar patrocínios em legados, eventos em revoluções e marcas em
+        agentes de mudança. Assim como o antídoto unia ingredientes para salvar
+        vidas, nós misturamos criatividade, estratégia e humanidade para criar
+        eventos que protegem sua marca do esquecimento e curam a desconexão com
+        seu público.
+      </p>
+    </section>
+
+    <div class="divider-gradient"></div>
+
+    <!-- Com Quem Já Trabalhamos Section -->
+    <section class="clients-section">
+      <h2 class="highlight-triaga">Com Quem Já Trabalhamos</h2>
+      <p class="clients-description">
+        Essas empresas escolheram a Agência Triaga como parceira para construir
+        marcas fortes na área do entretenimento:
+      </p>
+      <div class="clients-carousel-wrapper">
+        <div class="clients-logos">
+            <img src="heineken-logo.png" alt="Heineken" />
+            <img src="amstel-logo.png" alt="Amstel" />
+            <img src="cerveja-praia-logo.png" alt="Cerveja Praya" />
+            <img src="baer-mate-logo.png" alt="Baer-Mate" />
+            <img src="mambawater-logo.png" alt="Mambawater" />
+            <img src="brahma-logo.png" alt="Brahma" />
+            <img src="spaten-logo.png" alt="Spaten" />
+            <img src="corona-logo.png" alt="Corona" />
+            <img src="cerveja-petra-logo.png" alt="Cerveja Petra" />
+            <img src="coca-cola-logo.png" alt="Coca-Cola" />
+            <img src="agua-crystal-logo.png" alt="Água Crystal" />
+            <img src="ballena-logo.png" alt="Ballena" />
+            <img src="don-luiz-logo.png" alt="Don Luiz" />
+            <img src="st-pierri-logo.png" alt="St. Pierri" />
+            <img src="pink-moon-logo.png" alt="Pink Moon" />
+            <img src="xeque-mate-logo.png" alt="Xeque-Mate" />
+            <img src="smirnoff-logo.png" alt="Smirnoff" />
+            <img src="johnny-walker-logo.png" alt="Johnny Walker" />
+            <img src="ciroc-logo.png" alt="Ciroc" />
+            <img src="tanqueray-logo.png" alt="Tanqueray" />
+            <img src="grey-goose-logo.png" alt="Grey Goose" />
+            <img src="bombay-logo.png" alt="Bombay" />
+            <img src="absolut-logo.png" alt="Absolut" />
+            <img src="ballantines-logo.png" alt="Ballantine's" />
+            <img src="chivas-regal-logo.png" alt="Chivas Regal" />
+            <img src="beefeater-logo.png" alt="Beefeater" />
+            <img src="jameson-logo.png" alt="Jameson" />
+            <img src="jim-beam-logo.png" alt="Jim Beam" />
+            <img src="gin-larios-logo.png" alt="Gin Larios" />
+            <img src="heineken-logo.png" alt="Heineken" />
+            <img src="amstel-logo.png" alt="Amstel" />
+            <img src="cerveja-praia-logo.png" alt="Cerveja Praya" />
+            <img src="baer-mate-logo.png" alt="Baer-Mate" />
+            <img src="mambawater-logo.png" alt="Mambawater" />
+            <img src="brahma-logo.png" alt="Brahma" />
+            <img src="spaten-logo.png" alt="Spaten" />
+            <img src="corona-logo.png" alt="Corona" />
+            <img src="cerveja-petra-logo.png" alt="Cerveja Petra" />
+            <img src="coca-cola-logo.png" alt="Coca-Cola" />
+            <img src="agua-crystal-logo.png" alt="Água Crystal" />
+            <img src="ballena-logo.png" alt="Ballena" />
+            <img src="don-luiz-logo.png" alt="Don Luiz" />
+            <img src="st-pierri-logo.png" alt="St. Pierri" />
+            <img src="pink-moon-logo.png" alt="Pink Moon" />
+            <img src="xeque-mate-logo.png" alt="Xeque-Mate" />
+            <img src="smirnoff-logo.png" alt="Smirnoff" />
+            <img src="johnny-walker-logo.png" alt="Johnny Walker" />
+            <img src="ciroc-logo.png" alt="Ciroc" />
+            <img src="tanqueray-logo.png" alt="Tanqueray" />
+            <img src="grey-goose-logo.png" alt="Grey Goose" />
+            <img src="bombay-logo.png" alt="Bombay" />
+            <img src="absolut-logo.png" alt="Absolut" />
+            <img src="ballantines-logo.png" alt="Ballantine's" />
+            <img src="chivas-regal-logo.png" alt="Chivas Regal" />
+            <img src="beefeater-logo.png" alt="Beefeater" />
+            <img src="jameson-logo.png" alt="Jameson" />
+            <img src="jim-beam-logo.png" alt="Jim Beam" />
+            <img src="gin-larios-logo.png" alt="Gin Larios" />
+            <img src="heineken-logo.png" alt="Heineken" />
+            <img src="amstel-logo.png" alt="Amstel" />
+            <img src="cerveja-praia-logo.png" alt="Cerveja Praya" />
+            <img src="baer-mate-logo.png" alt="Baer-Mate" />
+            <img src="mambawater-logo.png" alt="Mambawater" />
+            <img src="brahma-logo.png" alt="Brahma" />
+            <img src="spaten-logo.png" alt="Spaten" />
+            <img src="corona-logo.png" alt="Corona" />
+            <img src="cerveja-petra-logo.png" alt="Cerveja Petra" />
+            <img src="coca-cola-logo.png" alt="Coca-Cola" />
+            <img src="agua-crystal-logo.png" alt="Água Crystal" />
+            <img src="ballena-logo.png" alt="Ballena" />
+            <img src="don-luiz-logo.png" alt="Don Luiz" />
+            <img src="st-pierri-logo.png" alt="St. Pierri" />
+            <img src="pink-moon-logo.png" alt="Pink Moon" />
+            <img src="xeque-mate-logo.png" alt="Xeque-Mate" />
+            <img src="smirnoff-logo.png" alt="Smirnoff" />
+            <img src="johnny-walker-logo.png" alt="Johnny Walker" />
+            <img src="ciroc-logo.png" alt="Ciroc" />
+            <img src="tanqueray-logo.png" alt="Tanqueray" />
+            <img src="grey-goose-logo.png" alt="Grey Goose" />
+            <img src="bombay-logo.png" alt="Bombay" />
+            <img src="absolut-logo.png" alt="Absolut" />
+            <img src="ballantines-logo.png" alt="Ballantine's" />
+            <img src="chivas-regal-logo.png" alt="Chivas Regal" />
+            <img src="beefeater-logo.png" alt="Beefeater" />
+            <img src="jameson-logo.png" alt="Jameson" />
+            <img src="jim-beam-logo.png" alt="Jim Beam" />
+            <img src="gin-larios-logo.png" alt="Gin Larios" />
+        </div>
         </div>
     </section>
 
-    <section class="services" id="parceiros">
-        <div class="service-grid">
-            <div class="service-item">
-                <h3>Estratégia Digital</h3>
-                <p>Desenvolvimento de estratégias personalizadas para sua marca</p>
-            </div>
-            <div class="service-item">
-                <h3>Design Criativo</h3>
-                <p>Criação de experiências visuais únicas e memoráveis</p>
-            </div>
-            <div class="service-item">
-                <h3>Desenvolvimento Web</h3>
-                <p>Websites modernos com foco em performance e experiência</p>
-            </div>
-        </div>
+    <!-- Nossas Causas Section -->
+    <section class="causes-section">
+      <h2>Nossas Causas</h2>
+
+      <!-- #VagaPraQuebrada Cause -->
+      <div class="cause-item">
+        <h4>#VagaPraQuebrada</h4>
+        <p>
+          <strong>Programa de estágios/trainees:</strong> Criar um fluxo de
+          contratação onde 30% das contratações venham de
+          favelas/comunidades.<br />
+          <strong>Cargos estratégicos:</strong> Não só operacional, mas também
+          em criação, gestão de projetos e até tomada de decisão.<br />
+          <strong>Banco de talentos:</strong> Um cadastro de profissionais das
+          periferias para indicar para outros eventos/empresas parceiras.<br />
+          <strong>Programa Triaga na Laje:</strong> Oficinas gratuitas de
+          produção cultural em periferias.<br />
+          <strong>Cases de sucesso:</strong> Documentar histórias de jovens que
+          passaram pelo programa e hoje estão em grandes projetos.
+        </p>
+        <p>
+          <strong>Como viabilizar financeiramente?</strong><br />
+          Parceria com marcas e venda de serviços.
+        </p>
+      </div>
+
+      <!-- MulheresNoComando Cause -->
+      <div class="cause-item">
+        <h4>MULHERES NO COMANDO – LIDERANÇA FEMININA COM EQUIDADE REAL</h4>
+        <p>
+          <strong>O que lutamos:</strong><br />
+          Cargos de liderança da Triaga ocupados por mulheres, salário
+          igualitário e voz ativa na estratégia. As decisões criativas e de
+          negócios devem ser feitas por mulheres.<br />
+          <strong>Próximos passos:</strong><br />
+          Criação de comitê interno de equidade, relatório anual e parcerias com
+          coletivos de mulheres na produção cultural.
+        </p>
+      </div>
+
+      <!-- DiversidadeNoComando Cause -->
+      <div class="cause-item">
+        <h4>
+          #DIVERSIDADENOCOMANDO – EQUIDADE DE GÊNERO, RAÇA E LGBTQIAP+ NO PODER
+        </h4>
+        <p>
+          <strong>O que fazemos:</strong><br />
+          Buscamos liderança preta, periférica e LGBTQIAP+ nos cargos de
+          decisão. A Triaga não quer ser mais uma agência que explora a cultura
+          sem dar espaço real de decisão e lucro.<br />
+          <strong>Próximos passos:</strong><br />
+          Criar um comitê de diversidade, metas claras e parcerias com
+          empregadoras afrocentradas e ONGs LGBTQIAP+.
+        </p>
+      </div>
     </section>
 
-    <section class="hero" id="depoimentos">
-        <div class="hero-content">
-            <h1>Experiências Digitais Premium</h1>
-            <p>Transformando momentos em memórias inesquecíveis</p>
+    <!-- Depoimentos Section -->
+    <section class="testimonials-section">
+      <h2>Depoimentos</h2>
+      <div class="testimonials">
+        <div class="testimonial-item">
+          <p>
+            "A Triaga conseguiu transformar nossa marca em um ícone cultural,
+            levando nossa mensagem para um público mais diverso e engajado."
+          </p>
+          <strong>- Cliente X</strong>
         </div>
+        <div class="testimonial-item">
+          <p>
+            "Trabalhar com a Triaga é sempre uma experiência transformadora.
+            Eles sabem como criar eventos que realmente impactam a comunidade."
+          </p>
+          <strong>- Parceiro Y</strong>
+        </div>
+      </div>
     </section>
 
-    <section class="services" id="contato">
-        <div class="service-grid">
-            <div class="service-item">
-                <h3>Estratégia Digital</h3>
-                <p>Desenvolvimento de estratégias personalizadas para sua marca</p>
-            </div>
-            <div class="service-item">
-                <h3>Design Criativo</h3>
-                <p>Criação de experiências visuais únicas e memoráveis</p>
-            </div>
-            <div class="service-item">
-                <h3>Desenvolvimento Web</h3>
-                <p>Websites modernos com foco em performance e experiência</p>
-            </div>
-        </div>
+    <div class="divider-gradient"></div>
+
+    <!-- Contato Section -->
+    <section class="contact-section" id="contato">
+      <h2><strong>E aí</strong>, vamos trocar uma ideia?!</h2>
+      <p>Meus dados são:</p>
+      <form action="#" method="POST" class="contact-form">
+        <input type="text" name="nome" placeholder="Nome completo*" required />
+        <input type="email" name="email" placeholder="Email*" required />
+        <input type="tel" name="telefone" placeholder="Telefone*" required />
+        <button type="submit">Enviar</button>
+      </form>
     </section>
-  
-      <script src="script.js"></script>
-</body>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>&copy; 2025 TRIAGA. Todos os direitos reservados.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/triaga" target="_blank">Facebook</a>
+        <a href="https://instagram.com/triaga" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/company/triaga" target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
+
+    <a href="#"><button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button></a>
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
