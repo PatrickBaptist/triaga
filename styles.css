@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 
 :root {
-  --purple: #6659b0;
+  --purple: #39306e;
   --blue: #48dacb;
   --orange: #ff6600;
   --red: #ff3300;
@@ -26,7 +26,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -113,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* header */
 .site-header {
+  width: 100%;
   padding: 1.5rem 2rem;
   position: fixed;
   width: 100%;
@@ -169,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-button {
   margin-top: 2rem;
-  background: var(--purple);
+  background: var(--orange);
   color: #fff;
   border: none;
   padding: 1rem 2rem;
@@ -184,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-button:hover {
-  background: var(--orange);
+  background: var(--blue);
 }
 
 @keyframes glowPulse {
@@ -300,6 +301,10 @@ a, button, .service-card {
   .purpose-section p {
     font-size: 1.1rem;
     line-height: 1.7;
+  }
+
+  .btn-contact {
+    font-size: 10px;
   }
 }
 
@@ -453,7 +458,7 @@ a, button, .service-card {
 
 .contact-section h2 strong {
   font-weight: 700;
-  color: var(--purple);
+  color: var(--orange);
 }
 
 .contact-section p {
@@ -483,18 +488,18 @@ a, button, .service-card {
 }
 
 .contact-form button {
-  background-color: var(--purple);
+  background-color: var(--orange);
   color: #fff;
   padding: 15px;
   border: none;
   border-radius: 12px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-  background-color: var(--orange);
+  background-color: var(--blue);
 }
 
 /* Rodapé */
@@ -527,12 +532,12 @@ a, button, .service-card {
   color: var(--yellow);
 }
 
-#backToTop {
+.back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #6659b0;
+  background-color: var(--orange);
   color: white;
   border: none;
   border-radius: 5px;
@@ -541,8 +546,8 @@ a, button, .service-card {
   transition: opacity 0.5s, visibility 0.5s;
 }
 
-#backToTop:hover {
-  background-color: var(--orange);
+.back-to-top:hover {
+  background-color: var(--blue);
   scale: 1.1;
 }
 
@@ -571,7 +576,6 @@ a, button, .service-card {
   background: var(--purple);
 }
 
-/* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--purple) #000000;
@@ -590,11 +594,44 @@ a, button, .service-card {
   .clients-logos {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
+
+  .cause-item .cause-h4 {
+    font-size: 18px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   .animated-bg {
     background: #000;
     color: #fff;
+  }
+
+  .cta-button {
+    background: var(--purple);
+  }
+  
+  .cta-button:hover {
+    background: var(--orange);
+  }
+
+  .contact-form button {
+    background-color: var(--purple);
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--orange);
+  }
+
+  .contact-section h2 strong {
+    font-weight: 700;
+    color: var(--purple);
+  }
+
+  .back-to-top {
+    background-color: #6659b0;
+  }
+  
+  .back-to-top:hover {
+    background-color: var(--orange);
   }
 }
