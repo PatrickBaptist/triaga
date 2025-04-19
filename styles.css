@@ -66,22 +66,6 @@ body {
   }
 }
 
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--blue);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease, opacity 0.2s ease;
-}
-
-.cursor.hover {
-  opacity: 1;
-  transform: scale(1.5);
-  border-color: var(--yellow);
-}
 
 button.text-selecting {
   background-color: var(--blue);
@@ -118,6 +102,8 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   width: 100%;
   top: 0;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
   z-index: 1000;
 }
 
@@ -130,7 +116,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header .logo img {
-  height: 40px;
+  width: 80px;
+  height: 70px;
+  border-radius: 10px;
+  
+}
+
+/*configuração header aparecer e desaparecer, configuração js*/
+.site-header.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
 }
 
 .btn-contact {
@@ -146,6 +141,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-contact:hover {
   background-color: var(--orange);
+}
+
+/*configuração da section entrando*/
+section {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 2s ease-in-out;
+
+}
+
+.play {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 2s ease-in-out;
+  transform: translateX(0);
 }
 
 /* Primeira Secção */
@@ -294,6 +305,12 @@ a, button, .service-card {
 }
 
 @media (max-width: 768px) {
+  /*configuração header aparecer e desaparecer, configuração js*/
+  .site-header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+  }
+  
   .purpose-section h2 {
     font-size: 2.2rem;
   }
@@ -367,9 +384,13 @@ a, button, .service-card {
 
 /* Nossas Causas Section */
 .causes-section {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(-100deg, var(--magenta), var(--purple));
-  background-size: 400% 400%;
   animation: gradient 5s ease infinite;
+  background-size: 200% 200%;
+  max-width: auto;
+  margin: 50px auto;
   padding: 5rem 2rem;
   color: white;
   text-align: center;
@@ -381,7 +402,10 @@ a, button, .service-card {
 }
 
 .cause-item {
-  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   padding: 2rem;
   margin: 1.5rem auto;
   max-width: 900px;
@@ -551,6 +575,13 @@ a, button, .service-card {
   scale: 1.1;
 }
 
+/*chama a função de scroll para o topo no js*/
+.back-to-top.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 @keyframes pulseGlow {
   0%, 100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
   50% { box-shadow: 0 0 10px var(--blue); }
@@ -582,6 +613,18 @@ a, button, .service-card {
 }
 
 @media (max-width: 480px) {
+
+  /*configuração header aparecer e desaparecer, configuração js*/
+  .site-header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+  }
+ 
+  
+  main {
+    padding-top: 70px; /* para não cobrir o conteúdo */
+  }
+
   .cta-button {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
@@ -634,4 +677,16 @@ a, button, .service-card {
   .back-to-top:hover {
     background-color: var(--orange);
   }
+
+  .causes-section{
+    background: #000;
+
+  }
+  .cause-item {
+    background: linear-gradient(-100deg, var(--purple), var(--magenta));
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+  }
+
 }
+ 
