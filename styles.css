@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 
 :root {
-  --purple: #39306e;
+  --purple: #342b68;
   --blue: #48dacb;
   --orange: #ff6600;
   --red: #ff3300;
   --magenta: #d1008f;
   --yellow: #ffcc00;
-  --green: #00cc66;
-  --cyan: #00b3b3;
 }
 
 * {
@@ -19,13 +17,11 @@
 }
 
 .animated-bg {
-  background: linear-gradient(-100deg, var(--purple));
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  background: var(--purple);
 }
 
 body {
-  width: 100vw;
+  max-width: 100%;
   height: 100dvh;
   color: white;
   font-family: 'Montserrat', sans-serif;
@@ -66,30 +62,6 @@ body {
   }
 }
 
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--blue);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease, opacity 0.2s ease;
-}
-
-.cursor.hover {
-  opacity: 1;
-  transform: scale(1.5);
-  border-color: var(--yellow);
-}
-
-button.text-selecting {
-  background-color: var(--blue);
-  color: black;
-  font-weight: bold;
-  outline: 2px solid var(--purple);
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
@@ -119,6 +91,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   top: 0;
   z-index: 1000;
+  transform: translateY(0);
+  transition: transform 0.5s ease;
 }
 
 .site-header .container {
@@ -129,8 +103,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-.site-header .logo img {
-  height: 40px;
+.logo {
+  width: 100px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  scale: 1.1;
+}
+
+.site-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.site-header.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
 }
 
 .btn-contact {
@@ -156,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 8px;
 }
 
 .hero h1 {
@@ -178,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 5px 5px 15px #505050;
+  box-shadow: 5px 5px 30px #030307;
   animation: glowPulse 2.5s ease-in-out infinite;
   transform-origin: center;
   transition: all 0.3s ease;
@@ -225,7 +218,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem;
   border-radius: 15px;
   transition: transform 0.3s ease;
-  backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -251,7 +243,7 @@ a, button, .service-card {
 
 /* Propósito Section */
 .purpose-section {
-  height: 100%;
+  min-height: 100vh;
   padding: 6rem 2rem;
   text-align: center;
   position: relative;
@@ -293,21 +285,6 @@ a, button, .service-card {
   opacity: 0.95;
 }
 
-@media (max-width: 768px) {
-  .purpose-section h2 {
-    font-size: 2.2rem;
-  }
-
-  .purpose-section p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
-
-  .btn-contact {
-    font-size: 10px;
-  }
-}
-
 /* Com Quem Já Trabalhamos Section */
 .clients-section {
   height: 50%;
@@ -339,7 +316,6 @@ a, button, .service-card {
 .clients-logos {
   display: flex;
   gap: 2rem;
-  animation: scroll-logos 60s linear infinite;
   width: max-content;
   align-items: center;
 }
@@ -348,12 +324,6 @@ a, button, .service-card {
   height: 60px;
   flex-shrink: 0;
   object-fit: contain;
-  filter: grayscale(1);
-  transition: filter 0.3s;
-}
-
-.clients-logos img:hover {
-  filter: grayscale(0);
 }
 
 @keyframes scroll-logos {
@@ -367,9 +337,7 @@ a, button, .service-card {
 
 /* Nossas Causas Section */
 .causes-section {
-  background: linear-gradient(-100deg, var(--magenta), var(--purple));
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
+  background: var(--magenta);
   padding: 5rem 2rem;
   color: white;
   text-align: center;
@@ -403,7 +371,7 @@ a, button, .service-card {
 
 /* Depoimentos Section */
 .testimonials-section {
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -533,22 +501,34 @@ a, button, .service-card {
 }
 
 .back-to-top {
+  width: 50px;
+  height: 40px;
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   padding: 10px 20px;
   background-color: var(--orange);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   z-index: 1000;
-  transition: opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .back-to-top:hover {
   background-color: var(--blue);
-  scale: 1.1;
+  transition: all 0.3s ease;
 }
 
 @keyframes pulseGlow {
@@ -581,6 +561,37 @@ a, button, .service-card {
   scrollbar-color: var(--purple) #000000;
 }
 
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+  }
+
+  .purpose-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .purpose-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .btn-contact {
+    font-size: 10px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 40px;
+  }
+
+  .back-to-top {
+    width: 30px;
+    height: 50px;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
 @media (max-width: 480px) {
   .cta-button {
     font-size: 1rem;
@@ -602,7 +613,7 @@ a, button, .service-card {
 
 @media (prefers-color-scheme: dark) {
   .animated-bg {
-    background: #000;
+    background: #0a0718;
     color: #fff;
   }
 
@@ -628,7 +639,7 @@ a, button, .service-card {
   }
 
   .back-to-top {
-    background-color: #6659b0;
+    background-color: var(--purple);
   }
   
   .back-to-top:hover {
