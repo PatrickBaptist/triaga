@@ -141,7 +141,7 @@ gsap.from(formElements, {
 
 // Carrossel de clientes melhorado
 const carousel = document.querySelector(".clients-logos");
-let speed = 0.5;
+let speed = 1;
 let currentX = 0;
 let isHovered = false;
 let isPaused = false;
