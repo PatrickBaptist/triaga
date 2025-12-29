@@ -10,6 +10,12 @@
     } else {
       header.classList.remove('hidden');
     }
+
+    if (window.scrollY > 60) {
+    header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
   
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
   });
@@ -141,7 +147,7 @@ gsap.from(formElements, {
 
 // Carrossel de clientes melhorado
 const carousel = document.querySelector(".clients-logos");
-let speed = 1;
+let speed = 2;
 let currentX = 0;
 let isHovered = false;
 let isPaused = false;
