@@ -50,6 +50,7 @@ button {
 .highlight-triaga {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -562,6 +563,7 @@ button {
   border-radius: 6px;
   border: none;
   outline: none;
+  font-size: 16px;
 }
 
 #whatsapp-button {
