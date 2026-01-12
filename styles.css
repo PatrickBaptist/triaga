@@ -202,7 +202,7 @@ button {
       rgba(14, 14, 14, 0.75),
       rgba(14, 14, 14, 0.9)
     ),
-    url("/assets/hero-bg.jfif");
+    url("./assets/hero-bg.jfif");
 
   background-size: cover;
   background-position: center;
