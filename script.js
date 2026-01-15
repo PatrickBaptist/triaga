@@ -1,49 +1,65 @@
-const mobileToggle = document.querySelector('.mobile-menu-toggle');
-const nav = document.querySelector('.nav');
+// Animação da hero section
+gsap.timeline()
+  .from(".hero h1", {
+    opacity: 0,
+    y: -40,
+    duration: 1,
+    ease: "power3.out",
+  })
+  .from(".hero p", {
+    opacity: 0,
+    y: 20,
+    duration: 2,
+    ease: "power3.out",
+  }, "-=0.7");
 
-mobileToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  mobileToggle.classList.toggle('open');
-});
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".method-section",
+    start: "top 75%",
+    toggleActions: "play none none none",
+  },
+})
+.from(".method-section h2", {
+  opacity: 0,
+  y: 40,
+  duration: 0.9,
+  ease: "power3.out",
+})
+.from(
+  ".method-section .method-item",
+  {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power3.out",
+  },
+  "-=0.4"
+);
 
-// Carrossel infinito de logos de clientes
-const carousel = document.querySelector('.clients-logos');
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".projects-section",
+    start: "top 75%",
+    toggleActions: "play none none none",
+  },
+})
+.from(".projects-section h2", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  ease: "power3.out",
+})
+.from(
+  ".projects-section .method-item",
+  {
+    opacity: 0,
+    y: 35,
+    duration: 0.9,
+    stagger: 0.2,
+    ease: "power3.out",
+  },
+  "-=0.4"
+);
 
-carousel.innerHTML += carousel.innerHTML;
-
-let speed = 2;
-let position = 0;
-
-function animateCarousel() {
-  position -= speed;
-  
-  if (position <= -carousel.scrollWidth / 2) {
-    position = 0;
-  }
-  
-  carousel.style.transform = `translateX(${position}px)`;
-  requestAnimationFrame(animateCarousel);
-}
-
-animateCarousel();
-
-const whatsappButton = document.getElementById('whatsapp-button');
-
-// Função para enviar mensagem via WhatsApp
-whatsappButton.addEventListener('click', () => {
-  const nome = document.getElementById('nome').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const telefone = document.getElementById('telefone').value.trim();
-
-  if (!nome || !email || !telefone) {
-    alert('Por favor, preencha todos os campos!');
-    return;
-  }
-
-  const mensagem = `Olá! Meu nome é ${nome}, meu email é ${email} e meu telefone é ${telefone}. Gostaria de conversar sobre vocês.`;
-  
-  const numeroWhatsApp = '5521985472151';
-  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
-
-  window.open(url, '_blank');
-});

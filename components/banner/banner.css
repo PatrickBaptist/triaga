@@ -1,0 +1,54 @@
+/* ================================
+   PAGE HERO – BANNER INTERNO
+================================ */
+
+.page-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 2rem 6rem;
+
+  background:
+    linear-gradient(
+      rgba(14, 14, 14, 0.75),
+      rgba(14, 14, 14, 0.9)
+    ),
+    url("../../assets/hero-bg.jfif");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-hero-content {
+  max-width: 900px;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.page-hero p {
+  margin-top: 2rem;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-button {
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(102, 89, 176, 0.35);
+}

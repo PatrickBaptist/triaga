@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIAGA - Conectando Propósito e Marcas</title>
+    <title>Triaga - MANIFESTO</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
@@ -11,6 +11,7 @@
     />
     <meta name="theme-color" content="#6659b0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../main.css" />
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -24,21 +25,42 @@
 
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo-text" aria-label="Triaga">
+            <a href="./index.html" class="logo-text" aria-label="Triaga">
               tr<span class="i-dot">i</span>aga
             </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <nav class="nav">
-              <a href="/index.html">Home</a>
-              <a href="/pages/manifesto/index.html">Manifesto</a>
-              <a href="/pages/servicos/index.html">Serviços</a>
-              <a href="/pages/impacto/index.html">Impacto</a>
-              <a href="/pages/projetos/index.html">Projetos</a>
-              <a href="/pages/contato/index.html" class="btn-contact">Contato</a>
+              <a class="link" href="../../index.html">Home</a>
+              <a class="link main" href="#hero">Manifesto</a>
+              <a class="link" href="../servicos/index.html">Serviços</a>
+              <a class="link" href="../impacto/index.html">Impacto</a>
+              <a class="link" href="../projetos/index.html">Projetos</a>
+              <a href="../contato/index.html" class="btn-contact">Contato</a>
             </nav>
         </div>
     </header>
 
-    <section class="manifesto-section">
+    <section class="page-hero" id="hero">
+      <div class="page-hero-content">
+        <h1 class="page-title">
+          MANIFESTO
+        </h1>
+        <p>
+          Não seguimos tendências. Construímos movimentos.
+        </p>
+        <a href="#manifesto">
+          <button class="cta-button">Explorar</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="manifesto-section" id="manifesto">
       <div class="manifesto-content">
         <h2 class="section-title">Nosso Manifesto</h2>
 
@@ -70,20 +92,27 @@
       </div>
     </section>
 
-    <section class="purpose-section" id="purpose-section">
-      <h2>Nosso <span class="highlight-triaga">Propósito</span></h2>
-      <p>
-        Nascemos da lenda da Triaga, o antídoto que curava venenos com uma
-        mistura única de ingredientes. Hoje, usamos essa mesma alquimia para
-        transformar patrocínios em legados, eventos em revoluções e marcas em
-        agentes de mudança. Assim como o antídoto unia ingredientes para salvar
-        vidas, nós misturamos criatividade, estratégia e humanidade para criar
-        eventos que protegem sua marca do esquecimento e curam a desconexão com
-        seu público.
-      </p>
+    <div class="divider-gradient"></div>
+
+    <section class="essence-section" id="essencia">
+      <div class="essence-content">
+        <h2 class="section-title">Nosso Propósito</h2>
+
+        <p class="essence-lead"></p>
+
+        <p class="essence-text">
+          Nascemos da lenda da Triaga, o antídoto que curava venenos com uma
+          mistura única de ingredientes. Hoje, usamos essa mesma alquimia para
+          transformar patrocínios em legados, eventos em revoluções e marcas em
+          agentes de mudança. Assim como o antídoto unia ingredientes para salvar
+          vidas, nós misturamos criatividade, estratégia e humanidade para criar
+          eventos que protegem sua marca do esquecimento e curam a desconexão com
+          seu público.
+        </p>
+      </div>
     </section>
 
-    <section class="essence-section">
+    <section class="essence-section section-glow" id="essencia">
       <div class="essence-content">
         <h2 class="section-title">Nossa Essência</h2>
 
@@ -100,10 +129,12 @@
       </div>
     </section>
 
+    <div class="divider-gradient"></div>
+
     <section class="closing-section">
       <h2>
-        Não criamos experiências passageiras.
-        Criamos histórias que continuam.
+        Não criamos experiências <span class="highlight-triaga">passageiras</span>.
+        Criamos <span class="highlight-triaga">histórias</span> que continuam.
       </h2>
       <p>
         Se sua marca quer fazer parte da cultura,
@@ -113,7 +144,7 @@
 
     <!-- Rodapé -->
     <footer class="footer">
-      <p>&copy; 2025 TRIAGA. Todos os direitos reservados.</p>
+      <p>&copy; 2025. Conecte-se conosco.</p>
       <div class="social-links">
         <a href="https://www.facebook.com/triagacompany/" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/triaga.ag?igsh=bXVrencyZHBhYXRy" target="_blank">Instagram</a>
@@ -127,5 +158,6 @@
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

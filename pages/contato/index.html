@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIAGA - Conectando Propósito e Marcas</title>
+    <title>Triaga - CONTATO</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
       href="../../assets/SITE_150X150[1].jpg"
     />
     <meta name="theme-color" content="#6659b0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../main.css" />
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -20,39 +20,48 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
     ></script>
   </head>
-  <body class="animated-bg">
+  <body>
 
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo-text" aria-label="Triaga">
+            <a href="./index.html" class="logo-text" aria-label="Triaga">
               tr<span class="i-dot">i</span>aga
             </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <nav class="nav">
-              <a href="/index.html">Home</a>
-              <a href="/pages/manifesto/index.html">Manifesto</a>
-              <a href="/pages/servicos/index.html">Serviços</a>
-              <a href="/pages/impacto/index.html">Impacto</a>
-              <a href="/pages/projetos/index.html">Projetos</a>
-              <a href="/pages/contato/index.html" class="btn-contact">Contato</a>
+              <a class="link" href="../../index.html">Home</a>
+              <a class="link" href="../manifesto/index.html">Manifesto</a>
+              <a class="link" href="../servicos/index.html">Serviços</a>
+              <a class="link" href="../impacto/index.html">Impacto</a>
+              <a class="link" href="../projetos/index.html">Projetos</a>
+              <a href="../contato/index.html" class="btn-contact">Contato</a>
             </nav>
         </div>
     </header>
 
     <!-- Contato Section -->
-    <section class="contact-section" id="contato">
-      <h2><strong>E aí</strong>, vamos trocar uma ideia?!</h2>
+    <section class="contact-section">
+      <div style="margin: 5rem 0;"></div>
+
+      <h2><strong class="highlight-triaga">E aí</strong>, vamos trocar uma ideia?!</h2>
       <p>Meus dados são:</p>
-      <form action="#" method="POST" class="contact-form">
-        <input type="text" name="nome" placeholder="Nome completo*" required />
-        <input type="email" name="email" placeholder="Email*" required />
-        <input type="tel" name="telefone" placeholder="Telefone*" required />
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="contact-form">
+        <input type="text" id="nome" placeholder="Nome completo*" required />
+        <input type="email" id="email" placeholder="Email*" required />
+        <input type="tel" id="telefone" placeholder="Telefone*" required />
+        <button id="whatsapp-button">Enviar pelo WhatsApp</button>
+      </div>
     </section>
 
     <!-- Rodapé -->
     <footer class="footer">
-      <p>&copy; 2025 TRIAGA. Todos os direitos reservados.</p>
+      <p>&copy; 2025. Conecte-se conosco.</p>
       <div class="social-links">
         <a href="https://www.facebook.com/triagacompany/" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/triaga.ag?igsh=bXVrencyZHBhYXRy" target="_blank">Instagram</a>
@@ -64,5 +73,6 @@
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

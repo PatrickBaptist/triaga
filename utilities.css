@@ -1,0 +1,30 @@
+:root {
+  --primary-gradient: linear-gradient(90deg, #6659b0, #8f7cff);
+  --primary-solid: #6659b0;
+  --primary-dark: #4f4494;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.highlight-triaga {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.divider-gradient {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-solid),
+    transparent
+  );
+  margin: 5rem 0;
+}

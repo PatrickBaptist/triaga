@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIAGA - Conectando Propósito e Marcas</title>
+    <title>Triaga - SERVIÇOS</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
@@ -11,6 +11,7 @@
     />
     <meta name="theme-color" content="#6659b0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../main.css" />
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -24,21 +25,42 @@
 
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo-text" aria-label="Triaga">
+            <a href="./index.html" class="logo-text" aria-label="Triaga">
               tr<span class="i-dot">i</span>aga
             </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <nav class="nav">
-              <a href="/index.html">Home</a>
-              <a href="/pages/manifesto/index.html">Manifesto</a>
-              <a href="/pages/servicos/index.html">Serviços</a>
-              <a href="/pages/impacto/index.html">Impacto</a>
-              <a href="/pages/projetos/index.html">Projetos</a>
-              <a href="/pages/contato/index.html" class="btn-contact">Contato</a>
+              <a class="link" href="../../index.html">Home</a>
+              <a class="link" href="../manifesto/index.html">Manifesto</a>
+              <a class="link main" href="#hero">Serviços</a>
+              <a class="link" href="../impacto/index.html">Impacto</a>
+              <a class="link" href="../projetos/index.html">Projetos</a>
+              <a href="../contato/index.html" class="btn-contact">Contato</a>
             </nav>
         </div>
     </header>
 
-    <section class="method-section">
+    <section class="page-hero" id="hero">
+      <div class="page-hero-content">
+        <h1 class="page-title">
+          SERVIÇOS
+        </h1>
+        <p>
+          Estratégia, criação e execução para marcas que querem relevância cultural.
+        </p>
+        <a href="#method">
+          <button class="cta-button">Explorar</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="method-section" id="method">
       <h2>Como Fazemos</h2>
 
       <div class="method-item">
@@ -87,19 +109,19 @@
     <section class="section services">
       <h2>O que Fazemos</h2>
       <div class="service-grid">
-        <div class="service-card">
+        <div class="method-item">
           <h3>Captação de Patrocínio</h3>
           <p>Conectamos marcas a projetos que geram valor social e cultural.</p>
         </div>
-        <div class="service-card">
+        <div class="method-item">
           <h3>Marketing de Influência</h3>
           <p>Alavancamos campanhas com criadores autênticos e relevantes.</p>
         </div>
-        <div class="service-card">
+        <div class="method-item">
           <h3>Conteúdo Criativo</h3>
           <p>Produzimos narrativas visuais que emocionam e engajam.</p>
         </div>
-        <div class="service-card">
+        <div class="method-item">
           <h3>Ativações de Marca</h3>
           <p>
             Experiências únicas para colocar sua marca no centro da conversa.
@@ -107,6 +129,8 @@
         </div>
       </div>
     </section>
+
+    <div class="divider-gradient"></div>
 
     <section class="closing-section">
       <h2>
@@ -122,8 +146,8 @@
     <div class="divider-gradient"></div>
 
     <!-- Rodapé -->
-    <footer class="footer"> 
-      <p>&copy; 2025 TRIAGA. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <p>&copy; 2025. Conecte-se conosco.</p>
       <div class="social-links">
         <a href="https://www.facebook.com/triagacompany/" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/triaga.ag?igsh=bXVrencyZHBhYXRy" target="_blank">Instagram</a>
@@ -137,5 +161,6 @@
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

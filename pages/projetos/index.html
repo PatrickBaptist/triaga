@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIAGA - Conectando Propósito e Marcas</title>
+    <title>Triaga - PROJETOS</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
@@ -11,6 +11,7 @@
     />
     <meta name="theme-color" content="#6659b0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../main.css" />
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -20,41 +21,64 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
     ></script>
   </head>
-  <body class="animated-bg">
+  <body>
 
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo-text" aria-label="Triaga">
+            <a href="./index.html" class="logo-text" aria-label="Triaga">
               tr<span class="i-dot">i</span>aga
             </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <nav class="nav">
-              <a href="/index.html">Home</a>
-              <a href="/pages/manifesto/index.html">Manifesto</a>
-              <a href="/pages/servicos/index.html">Serviços</a>
-              <a href="/pages/impacto/index.html">Impacto</a>
-              <a href="/pages/projetos/index.html">Projetos</a>
-              <a href="/pages/contato/index.html" class="btn-contact">Contato</a>
+              <a class="link" href="../../index.html">Home</a>
+              <a class="link" href="../manifesto/index.html">Manifesto</a>
+              <a class="link" href="../servicos/index.html">Serviços</a>
+              <a class="link" href="../impacto/index.html">Impacto</a>
+              <a class="link main" href="#hero">Projetos</a>
+              <a href="../contato/index.html" class="btn-contact">Contato</a>
             </nav>
         </div>
     </header>
 
-    <section class="projects-section">
+    <section class="page-hero" id="hero">
+      <div class="page-hero-content">
+        <h1 class="page-title">
+          PROJETOS
+        </h1>
+        <p>
+          Plataformas autorais que transformam cultura em impacto real.
+        </p>
+        <a href="#projects">
+          <button class="cta-button">Explorar</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
       <h2>Projetos Autorais</h2>
 
-      <div>
-        <h3>1994</h3>
-        <p>
-          Um ecossistema premium dedicado ao Hip Hop e ao Funk,
-          elevando a cultura urbana ao topo sem perder a raiz.
-        </p>
-      </div>
+      <div class="projects-grid">
+        <div class="method-item">
+          <h3>1994</h3>
+          <p>
+            Um ecossistema premium dedicado ao Hip Hop e ao Funk,
+            elevando a cultura urbana ao topo sem perder a raiz.
+          </p>
+        </div>
 
-      <div>
-        <h3>MeetMind</h3>
-        <p>
-          Comunidade de educação, tecnologia e negócios,
-          conectando líderes da nova economia.
-        </p>
+        <div class="method-item">
+          <h3>MeetMind</h3>
+          <p>
+            Comunidade de educação, tecnologia e negócios,
+            conectando líderes da nova economia.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -69,100 +93,42 @@
       </p>
       <div class="clients-carousel-wrapper">
         <div class="clients-logos">
-            <img class="img" src="/assets/heineken.png" alt="Heineken" />
-            <img class="img" src="/assets/amstel.png" alt="Amstel" />
-            <img class="img" src="/assets/cerveja-praya.png" alt="Cerveja Praya" />
-            <img class="img" src="/assets/baer-mate.webp" alt="Baer-Mate" />
-            <img class="img" src="/assets/mambawater.webp" alt="Mambawater" />
-            <img class="img" src="/assets/brahma.webp" alt="Brahma" />
-            <img class="img" src="/assets/spaten.webp" alt="Spaten" />
-            <img class="img" src="/assets/corona.png" alt="Corona" />
-            <img class="img" src="/assets/cerveja-petra.png" alt="Cerveja Petra" />
-            <img class="img" src="/assets/coca-cola.png" alt="Coca-Cola" />
-            <img class="img" src="/assets/agua-crystal.png" alt="Água Crystal" />
-            <img class="img" src="/assets/ballena.png" alt="Ballena" />
-            <img class="img" src="/assets/don-luiz.png" alt="Don Luiz" />
-            <img class="img" src="/assets/st-pierre.webp" alt="St. Pierri" />
-            <img class="img" src="/assets/Pinkmoon-pink.webp" alt="Pink Moon" />
-            <img class="img" src="/assets/xeque-mate.png" alt="Xeque-Mate" />
-            <img class="img" src="/assets/smirnoff.png" alt="Smirnoff" />
-            <img class="img" src="/assets/johnnie-walker.png" alt="Johnnie Walker" />
-            <img class="img" src="/assets/ciroc.png" alt="Ciroc" />
-            <img class="img" src="/assets/tanqueray.png" alt="Tanqueray" />
-            <img class="img" src="/assets/grey-goose.png" alt="Grey Goose" />
-            <img class="img" src="/assets/bombay.png" alt="Bombay" />
-            <img class="img" src="/assets/absolut.png" alt="Absolut" />
-            <img class="img" src="/assets/ballantines.png" alt="Ballantine's" />
-            <img class="img" src="/assets/chivas-regal.png" alt="Chivas Regal" />
-            <img class="img" src="/assets/beefeater.png" alt="Beefeater" />
-            <img class="img" src="/assets/jameson.png" alt="Jameson" />
-            <img class="img" src="/assets/jimbeam.webp" alt="Jim Beam" />
-            <img class="img" src="/assets/gin-larios.png" alt="Gin Larios" />
-            <img class="img" src="/assets/heineken.png" alt="Heineken" />
-            <img class="img" src="/assets/amstel.png" alt="Amstel" />
-            <img class="img" src="/assets/cerveja-praya.png" alt="Cerveja Praya" />
-            <img class="img" src="/assets/baer-mate.webp" alt="Baer-Mate" />
-            <img class="img" src="/assets/mambawater.webp" alt="Mambawater" />
-            <img class="img" src="/assets/brahma.webp" alt="Brahma" />
-            <img class="img" src="/assets/spaten.webp" alt="Spaten" />
-            <img class="img" src="/assets/corona.png" alt="Corona" />
-            <img class="img" src="/assets/cerveja-petra.png" alt="Cerveja Petra" />
-            <img class="img" src="/assets/coca-cola.png" alt="Coca-Cola" />
-            <img class="img" src="/assets/agua-crystal.png" alt="Água Crystal" />
-            <img class="img" src="/assets/ballena.png" alt="Ballena" />
-            <img class="img" src="/assets/don-luiz.png" alt="Don Luiz" />
-            <img class="img" src="/assets/st-pierre.webp" alt="St. Pierri" />
-            <img class="img" src="/assets/Pinkmoon-pink.webp" alt="Pink Moon" />
-            <img class="img" src="/assets/xeque-mate.png" alt="Xeque-Mate" />
-            <img class="img" src="/assets/smirnoff.png" alt="Smirnoff" />
-            <img class="img" src="/assets/johnnie-walker.png" alt="Johnnie Walker" />
-            <img class="img" src="/assets/ciroc.png" alt="Ciroc" />
-            <img class="img" src="/assets/tanqueray.png" alt="Tanqueray" />
-            <img class="img" src="/assets/grey-goose.png" alt="Grey Goose" />
-            <img class="img" src="/assets/bombay.png" alt="Bombay" />
-            <img class="img" src="/assets/absolut.png" alt="Absolut" />
-            <img class="img" src="/assets/ballantines.png" alt="Ballantine's" />
-            <img class="img" src="/assets/chivas-regal.png" alt="Chivas Regal" />
-            <img class="img" src="/assets/beefeater.png" alt="Beefeater" />
-            <img class="img" src="/assets/jameson.png" alt="Jameson" />
-            <img class="img" src="/assets/jimbeam.webp" alt="Jim Beam" />
-            <img class="img" src="/assets/gin-larios.png" alt="Gin Larios" />
-            <img class="img" src="/assets/heineken.png" alt="Heineken" />
-            <img class="img" src="/assets/amstel.png" alt="Amstel" />
-            <img class="img" src="/assets/cerveja-praya.png" alt="Cerveja Praya" />
-            <img class="img" src="/assets/baer-mate.webp" alt="Baer-Mate" />
-            <img class="img" src="/assets/mambawater.webp" alt="Mambawater" />
-            <img class="img" src="/assets/brahma.webp" alt="Brahma" />
-            <img class="img" src="/assets/spaten.webp" alt="Spaten" />
-            <img class="img" src="/assets/corona.png" alt="Corona" />
-            <img class="img" src="/assets/cerveja-petra.png" alt="Cerveja Petra" />
-            <img class="img" src="/assets/coca-cola.png" alt="Coca-Cola" />
-            <img class="img" src="/assets/agua-crystal.png" alt="Água Crystal" />
-            <img class="img" src="/assets/ballena.png" alt="Ballena" />
-            <img class="img" src="/assets/don-luiz.png" alt="Don Luiz" />
-            <img class="img" src="/assets/st-pierre.webp" alt="St. Pierri" />
-            <img class="img" src="/assets/Pinkmoon-pink.webp" alt="Pink Moon" />
-            <img class="img" src="/assets/xeque-mate.png" alt="Xeque-Mate" />
-            <img class="img" src="/assets/smirnoff.png" alt="Smirnoff" />
-            <img class="img" src="/assets/johnnie-walker.png" alt="Johnnie Walker" />
-            <img class="img" src="/assets/ciroc.png" alt="Ciroc" />
-            <img class="img" src="/assets/tanqueray.png" alt="Tanqueray" />
-            <img class="img" src="/assets/grey-goose.png" alt="Grey Goose" />
-            <img class="img" src="/assets/bombay.png" alt="Bombay" />
-            <img class="img" src="/assets/absolut.png" alt="Absolut" />
-            <img class="img" src="/assets/ballantines.png" alt="Ballantine's" />
-            <img class="img" src="/assets/chivas-regal.png" alt="Chivas Regal" />
-            <img class="img" src="/assets/beefeater.png" alt="Beefeater" />
-            <img class="img" src="/assets/jameson.png" alt="Jameson" />
-            <img class="img" src="/assets/jimbeam.webp" alt="Jim Beam" />
-            <img class="img" src="/assets/gin-larios.png" alt="Gin Larios" />
+            <img class="img" src="../../assets/heineken.png" alt="Heineken" title="Heineken"/>
+            <img class="img" src="../../assets/amstel.png" alt="Amstel" title="Amstel"/>
+            <img class="img" src="../../assets/cerveja-praya.png" alt="Cerveja Praya" title="Cerveja Praya"/>
+            <img class="img" src="../../assets/baer-mate.webp" alt="Baer-Mate" title="Baer-Mate"/>
+            <img class="img mambawater" src="../../assets/mambawater.webp" alt="Mambawater" title="Mambawater"/>
+            <img class="img" src="../../assets/brahma.webp" alt="Brahma" title="Brahma"/>
+            <img class="img" src="../../assets/spaten.webp" alt="Spaten" title="Spaten"/>
+            <img class="img" src="../../assets/corona.png" alt="Corona" title="Corona"/>
+            <img class="img" src="../../assets/cerveja-petra.png" alt="Cerveja Petra" title="Cerveja Petra"/>
+            <img class="img" src="../../assets/coca-cola.png" alt="Coca-Cola" title="Coca-Cola"/>
+            <img class="img" src="../../assets/agua-crystal.png" alt="Água Crystal" title="Água Crystal"/>
+            <img class="img" src="../../assets/ballena.png" alt="Ballena" title="Ballena"/>
+            <img class="img" src="../../assets/don-luiz.png" alt="Don Luiz" title="Don Luiz"/>
+            <img class="img" src="../../assets/st-pierre.webp" alt="St. Pierri" title="St. Pierri"/>
+            <img class="img" src="../../assets/Pinkmoon-pink.webp" alt="Pink Moon" title="Pink Moon"/>
+            <img class="img" src="../../assets/xeque-mate.png" alt="Xeque-Mate" title="Xeque-Mate"/>
+            <img class="img" src="../../assets/smirnoff.png" alt="Smirnoff" title="Smirnoff"/>
+            <img class="img dark-logo" src="../../assets/johnnie-walker.png" alt="Johnnie Walker" title="Johnnie Walker"/>
+            <img class="img dark-logo" src="../../assets/ciroc.png" alt="Ciroc" title="Ciroc"/>
+            <img class="img" src="../../assets/tanqueray.png" alt="Tanqueray" title="Tanqueray"/>
+            <img class="img" src="../../assets/grey-goose.png" alt="Grey Goose" title="Grey Goose"/>
+            <img class="img" src="../../assets/bombay.png" alt="Bombay" title="Bombay"/>
+            <img class="img" src="../../assets/absolut.png" alt="Absolut" title="Absolut"/>
+            <img class="img dark-logo" src="../../assets/ballantines.png" alt="Ballantine's" title="Ballantine's"/>
+            <img class="img" src="../../assets/chivas-regal.png" alt="Chivas Regal" title="Chivas Regal"/>
+            <img class="img" src="../../assets/beefeater.png" alt="Beefeater" title="Beefeater"/>
+            <img class="img" src="../../assets/jameson.png" alt="Jameson" title="Jameson"/>
+            <img class="img" src="../../assets/jimbeam.webp" alt="Jim Beam" title="Jim Beam"/>
+            <img class="img" src="../../assets/gin-larios.png" alt="Gin Larios" title="Gin Larios"/>
         </div>
       </div>
     </section>
 
     <!-- Rodapé -->
     <footer class="footer">
-      <p>&copy; 2025 TRIAGA. Todos os direitos reservados.</p>
+      <p>&copy; 2025. Conecte-se conosco.</p>
       <div class="social-links">
         <a href="https://www.facebook.com/triagacompany/" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/triaga.ag?igsh=bXVrencyZHBhYXRy" target="_blank">Instagram</a>
@@ -171,10 +137,9 @@
       </div>
     </footer>
 
-    <a href="#"><button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button></a>
-
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRIAGA - Conectando Propósito e Marcas</title>
+    <title>Triaga - IMPACTO</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
@@ -11,6 +11,7 @@
     />
     <meta name="theme-color" content="#6659b0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../main.css" />
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -24,21 +25,42 @@
 
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo-text" aria-label="Triaga">
+            <a href="./index.html" class="logo-text" aria-label="Triaga">
               tr<span class="i-dot">i</span>aga
             </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
             <nav class="nav">
-              <a href="/index.html">Home</a>
-              <a href="/pages/manifesto/index.html">Manifesto</a>
-              <a href="/pages/servicos/index.html">Serviços</a>
-              <a href="/pages/impacto/index.html">Impacto</a>
-              <a href="/pages/projetos/index.html">Projetos</a>
-              <a href="/pages/contato/index.html" class="btn-contact">Contato</a>
+              <a class="link" href="../../index.html">Home</a>
+              <a class="link" href="../manifesto/index.html">Manifesto</a>
+              <a class="link" href="../servicos/index.html">Serviços</a>
+              <a class="link main" href="#hero">Impacto</a>
+              <a class="link" href="../projetos/index.html">Projetos</a>
+              <a href="../contato/index.html" class="btn-contact">Contato</a>
             </nav>
         </div>
     </header>
 
-    <section class="formula-section">
+    <section class="page-hero" id="hero">
+      <div class="page-hero-content">
+        <h1 class="page-title">
+          IMPACTO
+        </h1>
+        <p>
+          Comunicação que gera mudança social, econômica e cultural.
+        </p>
+        <a href="#formula">
+          <button class="cta-button">Explorar</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="formula-section" id="formula">
       <h2>Fórmula Triaga</h2>
       <p><strong>O antídoto social para uma comunicação desigual.</strong></p>
 
@@ -114,6 +136,8 @@
       </div>
     </section>
 
+    <div class="divider-gradient"></div>
+
     <section class="closing-section">
       <h2>
         Não criamos experiências passageiras.
@@ -127,7 +151,7 @@
 
     <!-- Rodapé -->
     <footer class="footer">
-      <p>&copy; 2025 TRIAGA. Todos os direitos reservados.</p>
+      <p>&copy; 2025. Conecte-se conosco.</p>
       <div class="social-links">
         <a href="https://www.facebook.com/triagacompany/" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/triaga.ag?igsh=bXVrencyZHBhYXRy" target="_blank">Instagram</a>
@@ -136,10 +160,9 @@
       </div>
     </footer>
 
-    <a href="#"><button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button></a>
-
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

@@ -1,0 +1,91 @@
+.essence-section {
+  height: 80vh;
+  padding: 8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.essence-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #a38bff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #48dacb,
+    transparent
+  );
+  border-radius: 999px;
+}
+
+.essence-lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.essence-text {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.section-glow > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(
+      circle at center,
+      #48dacb42,
+      transparent 20%
+    );
+  z-index: 0;
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding-top: 10rem !important;
+    padding-bottom: 10rem !important;
+  }
+
+  .section-title {
+    font-size: 3.6rem;
+    letter-spacing: -1.5px;
+  }
+
+  .essence-lead {
+    font-size: 1.45rem;
+    line-height: 1.6;
+  }
+
+  .essence-text {
+    font-size: 1.1rem;
+    max-width: 680px;
+  }
+}
