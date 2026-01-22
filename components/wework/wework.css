@@ -100,9 +100,3 @@
         letter-spacing: -1.5px;
     }
 }
-
-@media (max-width: 768px) {
-  .clients-logos img {
-    height: 50px;
-  }
-}
