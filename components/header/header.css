@@ -43,7 +43,7 @@
 .logo-text .i-dot::after {
   content: "";
   position: absolute;
-  top: 0.04em;
+  top: 0.06em;
   left: 55%;
   transform: translateX(-50%);
   width: 0.23em;
