@@ -87,6 +87,7 @@
 .clients-logos img.mambawater {
   height: 150px;
   max-width: 150px;
+  filter: drop-shadow(2px 2px 0px #fff) drop-shadow(-2px -2px 0px #fff);
 }
 
 @media (min-width: 1200px) {
@@ -99,4 +100,10 @@
         font-size: 3.6rem;
         letter-spacing: -1.5px;
     }
+}
+
+@media (max-width: 768px) {
+  .clients-section {
+    padding: 1rem 0rem;
+  }
 }

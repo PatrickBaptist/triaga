@@ -3,7 +3,6 @@
 ===================== */
 
 .manifesto-section {
-  min-height: 100vh;
   padding: 10rem 2rem 8rem;
   display: flex;
   align-items: center;
@@ -165,5 +164,11 @@
 
   .purpose-section p {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .manifesto-section {
+    padding: 3rem 2rem 1rem 2rem; 
   }
 }

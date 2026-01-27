@@ -135,3 +135,17 @@
     font-size: 1.05rem;
   }
 }
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    gap: 1rem;
+  }
+}

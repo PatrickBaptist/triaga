@@ -196,7 +196,7 @@
   }
 
   .hero-title {
-    font-size: 5.2rem;
+    font-size: 6rem;
     line-height: 1.05;
     letter-spacing: -2px;
   }
@@ -229,5 +229,28 @@
 
   .projects-section p {
     font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 9rem 2rem;
+  }
+
+  .method-section {
+    padding: 1rem 2rem;
+    gap: 1px;
+  }
+
+  .projects-section {
+    padding: 1px 2rem;
+  }
+
+  .projects-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    gap: 2rem;
   }
 }

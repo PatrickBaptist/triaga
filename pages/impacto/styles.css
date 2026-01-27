@@ -83,7 +83,6 @@
 
 .causes-section {
   padding: 8rem 2rem 10rem;
-  max-width: 1000px;
 }
 
 .causes-section h2 {
@@ -199,5 +198,24 @@
 
   .cause-item p {
     font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .formula-section {
+    padding: 3rem 2rem;
+  }
+
+  .causes-section {
+    padding: 1rem 2rem;
+  }
+
+  .causes-section h2 {
+    margin-bottom: 3rem;
+  }
+
+  .cause-item {
+    padding: 1.5rem 3rem;
+    margin-bottom: 1rem;
   }
 }

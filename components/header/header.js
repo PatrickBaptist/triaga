@@ -32,4 +32,13 @@ export function headerScript() {
     nav.classList.toggle('open');
     mobileToggle.classList.toggle('open');
   });
+
+  const navLinks = nav.querySelectorAll('a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      mobileToggle.classList.remove('open');
+    });
+  });
 }

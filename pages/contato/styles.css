@@ -1,0 +1,16 @@
+.contato-body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    padding-top: 80px;
+}
+
+.contato-body > section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

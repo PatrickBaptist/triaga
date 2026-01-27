@@ -64,3 +64,9 @@
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 768px) {
+  .closing-section {
+    padding: 1rem 2rem;
+  }
+}
