@@ -13,10 +13,16 @@ export function whatsappForm() {
     }
 
     const mensagem =
-      `Olá! Meu nome é ${nome}, meu email é ${email} e meu telefone é ${telefone}. ` +
-      `Gostaria de conversar sobre vocês.`;
+      `Fala, time Triaga! \n\n` +
+      `Me chamo *${nome}* e sinto que temos uma sintonia cultural. \n` +
+      `Meu contato é: ${email} | ${telefone}\n\n` +
+      `Bora trocar uma ideia sobre como transformar minha marca em cultura e gerar impacto real juntos?`;
 
-    const numeroWhatsApp = '5521985472151';
+    const p1 = '5521';
+    const p2 = '98547';
+    const p3 = '2151';
+    const numeroWhatsApp = p1 + p2 + p3;
+
     const url =
       `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
