@@ -29,10 +29,11 @@ export function whatsappForm() {
     window.open(url, '_blank');
   });
 
+  const elements = document.querySelectorAll('.contact-section h2, .contact-section p');
   const contactForm = document.querySelector('.contact-form');
   const formElements = contactForm.querySelectorAll('input, button');
 
-  gsap.from(document.querySelector('.contact-section h2'), {
+  gsap.from(elements, {
     scrollTrigger: {
       trigger: '.contact-section',
       start: "top 85%"
