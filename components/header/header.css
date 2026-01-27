@@ -100,7 +100,6 @@
   background: var(--primary-gradient);
 }
 
-.btn-contact:hover,
 .contact-form button:hover {
   filter: brightness(1.1);
 }
@@ -110,11 +109,12 @@
   border-radius: 999px;
   font-weight: 500;
   color: #ffffff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .btn-contact:hover {
-  transform: translateY(-3px);
+  filter: brightness(1.1);
+  transform: translateY(-2px);
 }
 
 /* Esconder menu no mobile e mostrar botão */
