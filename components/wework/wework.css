@@ -36,12 +36,6 @@
   content: "";
   position: absolute;
   inset: -30%;
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(72, 218, 203, 0.25),
-      transparent 35%
-    );
   z-index: 0;
 }
 
