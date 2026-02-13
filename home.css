@@ -358,7 +358,7 @@
 
 @media (min-width: 1600px) {
   .hero {
-    padding: 10rem 8rem; /* 👈 Mais padding nas telas grandes */
+    padding: 10rem 8rem;
   }
 
   .hero-content {
