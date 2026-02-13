@@ -63,3 +63,33 @@ gsap.timeline({
   "-=0.4"
 );
 
+function animateCounters() {
+  const counters = document.querySelectorAll('.stat-number');
+
+  document.querySelectorAll('.stat-number').forEach(counter => {
+    counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const update = () => {
+      current += increment;
+      if (current < target) {
+        counter.textContent = Math.floor(current) + '+';
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target + '+';
+      }
+    };
+    
+    // Inicia após 1.5s (depois das animações GSAP)
+    setTimeout(update, 1500);
+  });
+    
+    // Inicia quando seção aparece
+    setTimeout(update, 1500);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', animateCounters);

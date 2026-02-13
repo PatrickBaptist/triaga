@@ -2,10 +2,12 @@
    HERO
 ===================== */
 .hero {
-  min-height: 100vh;
+  position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding: 6rem 2rem 6rem;
+  justify-content: center;
+  padding: 6rem 2rem;
 
   background:
     linear-gradient(
@@ -21,6 +23,8 @@
 
 .hero-content {
   max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -28,6 +32,7 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1.5px;
+  margin-bottom: 0;
 }
 
 .hero p {
@@ -35,6 +40,108 @@
   max-width: 600px;
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+/* Stats Bar */
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 500px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero-stats {
+    gap: 2rem;
+  }
+  .stat-number {
+    font-size: 1.8rem;
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-mouse {
+  width: 22px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll-wheel {
+  width: 3px;
+  height: 8px;
+  background: #48dacb;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0% { 
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateX(-50%) translateY(12px); 
+  }
+}
+
+.hero-title .highlight-triaga {
+  animation: text-glow 4s ease-in-out infinite;
+}
+
+@keyframes text-glow {
+  0%, 100% { 
+    text-shadow: 0 0 20px rgba(72, 218, 203, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 30px rgba(72, 218, 203, 0.4);
+  }
 }
 
 /* =====================
@@ -191,12 +298,16 @@
 
   /* HERO */
   .hero {
-    padding-top: 14rem;
-    padding-bottom: 12rem;
+    padding: 10rem 4rem;
+  }
+
+  .hero-content {
+    max-width: 1000px;
+    margin-left: 0;
   }
 
   .hero-title {
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 1.05;
     letter-spacing: -2px;
   }
@@ -204,6 +315,19 @@
   .hero p {
     font-size: 1.35rem;
     max-width: 720px;
+  }
+
+  .hero-stats {
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
   }
 
   /* TÍTULOS DE SEÇÃO */
@@ -232,9 +356,58 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .hero {
+    padding: 10rem 8rem; /* 👈 Mais padding nas telas grandes */
+  }
+
+  .hero-content {
+    max-width: 1100px;
+  }
+
+  .hero-title {
+    font-size: 6rem;
+  }
+
+  .hero p {
+    font-size: 1.35rem;
+    max-width: 720px;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
-    padding: 9rem 2rem;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .scroll-indicator {
+    bottom: 2rem;
   }
 
   .method-section {
