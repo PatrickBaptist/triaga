@@ -13,56 +13,6 @@ gsap.timeline()
     ease: "power3.out",
   }, "-=0.7");
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".method-section",
-    start: "top 75%",
-    toggleActions: "play none none none",
-  },
-})
-.from(".method-section h2", {
-  opacity: 0,
-  y: 40,
-  duration: 0.9,
-  ease: "power3.out",
-})
-.from(
-  ".method-section .method-item",
-  {
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: "power3.out",
-  },
-  "-=0.4"
-);
-
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".projects-section",
-    start: "top 75%",
-    toggleActions: "play none none none",
-  },
-})
-.from(".projects-section h2", {
-  opacity: 0,
-  y: 40,
-  duration: 1,
-  ease: "power3.out",
-})
-.from(
-  ".projects-section .method-item",
-  {
-    opacity: 0,
-    y: 35,
-    duration: 0.9,
-    stagger: 0.2,
-    ease: "power3.out",
-  },
-  "-=0.4"
-);
-
 const TRIAGA_FOUNDATION_YEAR = 2022;
 
 function initHeroStats() {
@@ -97,17 +47,15 @@ function animateCounters() {
         }
       };
       
-      // Inicia após 1.5s (depois das animações GSAP)
       setTimeout(update, 1500);
     });
   });
 }
 
-// Animação Method Section - CORRIGIDA
+// Animação Method Section
 function methodSectionAnimation() {
   if (!document.querySelector('.method-section')) return;
   
-  // Set inicial - garante que começa invisível
   gsap.set(".method-section h2, .method-item", {
     autoAlpha: 0,
     y: 30,
@@ -118,8 +66,7 @@ function methodSectionAnimation() {
     scrollTrigger: {
       trigger: ".method-section",
       start: "top 75%",
-      once: true, // 👈 Anima só 1x
-      // markers: true, // 👈 Descomente para debug
+      once: true,
     },
   })
   .to(".method-section h2", {
@@ -137,7 +84,40 @@ function methodSectionAnimation() {
   }, "-=0.4");
 }
 
+function projectsSectionAnimation() {
+  if (!document.querySelector('.projects-section')) return;
+
+  // Set inicial - garante que começa invisível
+  gsap.set(".projects-section h2, .project-item", {
+    autoAlpha: 0,
+    y: 40,
+  });
+
+  // Timeline
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".projects-section",
+      start: "top 75%",
+      once: true,
+    },
+  })
+  .to(".projects-section h2", {
+    autoAlpha: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+  })
+  .to(".project-item", {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.9,
+    stagger: 0.2,
+    ease: "power3.out",
+  }, "-=0.4");
+}
+
 document.addEventListener('DOMContentLoaded',  () => {
   initHeroStats();
   methodSectionAnimation();
+  projectsSectionAnimation();
 });
