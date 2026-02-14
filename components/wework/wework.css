@@ -267,7 +267,7 @@
 
 @media (max-width: 768px) {
   .clients-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .clients-section h2 {
@@ -302,6 +302,8 @@
   .featured-clients {
     margin: 4rem 0;
     padding: 3rem 1.5rem;
+    background: transparent;
+    border: none;
   }
 
   .featured-grid {
