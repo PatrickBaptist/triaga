@@ -1,5 +1,11 @@
+/* =====================
+   PROJECTS
+===================== */
+
 .projects-section {
   padding: 8rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .projects-section h2 {
@@ -7,42 +13,103 @@
   margin-bottom: 4rem;
   color: #a38bff;
   position: relative;
+  display: inline-block;
 }
 
 .projects-section h2::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 30%;
+  bottom: -0.5rem;
+  width: 80px;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    #48dacb,
-    transparent
-  );
+  background: linear-gradient(90deg, #48dacb, transparent);
   border-radius: 999px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 4rem;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.project-item {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-12px);
+  border-color: rgba(72, 218, 203, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.8);
+}
+
+.project-item:hover .project-image img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+/* Overlay na imagem */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(14, 14, 14, 0.4) 50%,
+    rgba(14, 14, 14, 0.9) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Tag do projeto */
+.project-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(72, 218, 203, 0.2);
+  border: 1px solid rgba(72, 218, 203, 0.4);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #48dacb;
+  backdrop-filter: blur(10px);
+}
+
+.project-content {
+  padding: 2rem;
 }
 
 .project-item h3 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
-  transition: color 0.35s ease;
-}
-
-.project-item p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  max-width: 480px;
-  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+  color: #ffffff;
   transition: color 0.35s ease;
 }
 
@@ -50,102 +117,243 @@
   color: #48dacb;
 }
 
+.project-item p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+  transition: color 0.35s ease;
+}
+
 .project-item:hover p {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.method-item {
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #48dacb;
+  text-decoration: none;
+  transition: all 0.3s ease;
   position: relative;
-  padding: 2.6rem 2.2rem;
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
 }
 
-.method-item::before {
+.project-link::after {
   content: "";
   position: absolute;
+  bottom: -4px;
   left: 0;
-  top: 15%;
-  width: 4px;
-  height: 70%;
-  background: linear-gradient(180deg, #6659b0, #48dacb);
-  border-radius: 4px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  width: 0;
+  height: 2px;
+  background: #48dacb;
+  transition: width 0.3s ease;
 }
 
-.method-item:hover::before {
+.project-link:hover {
+  gap: 0.8rem;
+  color: #6de9d4;
+}
+
+.project-link:hover::after {
+  width: 100%;
+}
+
+.project-link svg {
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover svg {
+  transform: translateX(4px);
+}
+
+.project-1994::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-1994:hover::before {
   opacity: 1;
 }
 
-.method-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1.1rem;
-  transition: color 0.3s ease;
+/* Projeto MeetMind - Vibes Tech */
+.project-meetmind::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(102, 89, 176, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.method-item p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
-  transition: color 0.3s ease;
+.project-meetmind:hover::before {
+  opacity: 1;
 }
 
-.method-item:hover h3 {
-  color: #48dacb;
+/* Garante que conteúdo fica acima do gradient */
+.project-image,
+.project-content {
+  position: relative;
+  z-index: 1;
 }
 
-.method-item:hover p {
-  color: rgba(255, 255, 255, 0.95);
+.project-1994 .project-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(14, 14, 14, 0.3) 50%,
+    rgba(14, 14, 14, 0.8) 100%
+  );
+}
+
+.project-1994 .project-image img {
+  object-position: center center;
+  filter: brightness(0.95) saturate(1.1);
+}
+
+.project-1994:hover .project-image img {
+  filter: brightness(1.05) saturate(1.2);
+}
+
+/* Projeto MeetMind - Precisa de mais overlay */
+.project-meetmind .project-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 14, 14, 0.2) 0%,
+    rgba(14, 14, 14, 0.5) 50%,
+    rgba(14, 14, 14, 0.95) 100%
+  );
+}
+
+.project-meetmind .project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.project-meetmind .project-image img {
+  width: 130%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-5%);
+  filter: brightness(0.85) contrast(1.1);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-meetmind:hover .project-image img {
+  filter: brightness(1) contrast(1.15);
+  transform: translateX(-5%) scale(1.08);
+}
+
+/* Tag do MeetMind maior */
+.project-meetmind .project-tag {
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+}
+
+/* Glow effect no logo dourado do 1994 */
+.project-1994 .project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 215, 0, 0.1) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.project-1994:hover .project-image::after {
+  opacity: 1;
 }
 
 @media (min-width: 1200px) {
-
-  /* Seções mais altas */
-  section {
-    padding-top: 10rem !important;
-    padding-bottom: 10rem !important;
+  .projects-section {
+    padding: 10rem 2rem;
   }
 
-  /* TÍTULOS DE SEÇÃO */
-  .method-section h2,
   .projects-section h2 {
     font-size: 3.6rem;
     letter-spacing: -1.5px;
+    margin-bottom: 5rem;
   }
 
-  /* METHOD */
-  .method-item h3 {
-    font-size: 1.45rem;
+  .projects-grid {
+    gap: 4rem;
   }
 
-  .method-item p {
-    font-size: 1.05rem;
+  .project-item h3 {
+    font-size: 2.8rem;
   }
 
-  /* PROJECTS */
-  .projects-section h3 {
-    font-size: 1.7rem;
+  .project-item p {
+    font-size: 1.1rem;
   }
 
-  .projects-section p {
-    font-size: 1.05rem;
+  .project-content {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .projects-section {
+    max-width: 1600px;
   }
 }
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   .projects-section h2 {
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
   }
 
   .projects-grid {
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-item p {
+    font-size: 1rem;
+  }
+
+  .project-content {
+    padding: 1.5rem;
   }
 }

@@ -1,20 +1,22 @@
 /* =====================
-   METHOD SECTION
+   METHOD
 ===================== */
 
 .method-section {
   padding: 8rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   position: relative;
+  max-width: 1400px;
+  margin: 15px auto;
 }
 
 .method-section h2 {
   grid-column: 1 / -1;
   font-size: 2.8rem;
   color: #a38bff;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   position: relative;
   letter-spacing: -1px;
 }
@@ -24,7 +26,7 @@
   position: absolute;
   left: 0;
   bottom: -0.5rem;
-  width: 30%;
+  width: 80px;
   height: 3px;
   background: linear-gradient(90deg, #48dacb, transparent);
   border-radius: 999px;
@@ -32,42 +34,108 @@
 
 .method-item {
   position: relative;
-  padding: 2.6rem 2.2rem;
+  padding: 2.5rem 2rem;
   border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6px);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  transition: all 0.4s ease;
+  overflow: hidden;
 }
 
+/* Barra lateral esquerda */
 .method-item::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 15%;
+  top: 0;
   width: 4px;
-  height: 70%;
+  height: 100%;
   background: linear-gradient(180deg, #6659b0, #48dacb);
-  border-radius: 4px;
   opacity: 0;
   transition: opacity 0.4s ease;
+}
+
+/* Background pattern sutil */
+.method-item::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(72, 218, 203, 0.03) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.method-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(72, 218, 203, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .method-item:hover::before {
   opacity: 1;
 }
 
+.method-item:hover::after {
+  opacity: 1;
+}
+
+.method-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(72, 218, 203, 0.1);
+  line-height: 1;
+  transition: all 0.4s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.method-item:hover .method-number {
+  color: rgba(72, 218, 203, 0.2);
+  transform: scale(1.1);
+}
+
+.method-icon svg {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.method-item:hover .method-icon svg {
+  opacity: 1;
+  transform: scale(1.1) rotate(5deg);
+}
+
 .method-item h3 {
   font-size: 1.25rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .method-item p {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  margin: 0;
 }
 
 .method-item:hover h3 {
@@ -75,7 +143,20 @@
 }
 
 .method-item:hover p {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =====================
+   PRIMEIRO CARD DESTAQUE
+===================== */
+
+.method-item:first-of-type {
+  border-color: rgba(72, 218, 203, 0.15);
+  background: rgba(72, 218, 203, 0.03);
+}
+
+.method-item:first-of-type .method-number {
+  color: rgba(72, 218, 203, 0.2);
 }
 
 /* =====================
@@ -169,23 +250,31 @@
 @media (min-width: 1200px) {
 
   .method-section {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 10rem 2rem;
   }
 
-  .method-section h2,
-  .services h2 {
+  .method-section h2 {
     font-size: 3.6rem;
-    letter-spacing: -1.6px;
+    letter-spacing: -1.5px;
+    margin-bottom: 4rem;
+  }
+
+  .method-item {
+    padding: 3rem 2.5rem;
   }
 
   .method-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .method-item p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+
+  .method-number {
+    font-size: 3.5rem;
   }
 
   .service-card h3 {
@@ -197,14 +286,45 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .method-section {
+    max-width: 1600px;
+    gap: 3rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .services {
+  .method-section {
     padding: 1rem 2rem;
+    gap: 1.5rem;
   }
 
-  .method-section {
-    padding: 3rem 2rem;
-    gap: 1px;
+  .method-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .method-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .method-number {
+    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .method-icon svg {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .method-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .method-item p {
+    font-size: 0.95rem;
   }
 
   .services {

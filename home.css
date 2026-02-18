@@ -713,15 +713,6 @@
   .method-number {
     font-size: 3.5rem;
   }
-
-  /* PROJECTS */
-  .projects-section h3 {
-    font-size: 1.7rem;
-  }
-
-  .projects-section p {
-    font-size: 1.05rem;
-  }
 }
 
 @media (min-width: 1600px) {
@@ -819,7 +810,7 @@
     gap: 1px;
   }
 
-   .projects-section {
+  .projects-section {
     padding: 4rem 1.5rem;
   }
 
