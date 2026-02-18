@@ -1,25 +1,44 @@
 export function closingSectionAnimation() {
+  gsap.set(".closing-section h2, .closing-subtitle, .closing-stats, .closing-ctas, .closing-quote", {
+    autoAlpha: 0,
+    y: 30,
+  });
+  
   return gsap.timeline({
     scrollTrigger: {
       trigger: ".closing-section",
-      start: "top 50%",
-      toggleActions: "play none none none",
+      start: "top 60%",
+      once: true,
     },
   })
-  .from(".closing-section h2", {
-    opacity: 0,
-    y: 40,
+  .to(".closing-section h2", {
+    autoAlpha: 1,
+    y: 0,
     duration: 1,
     ease: "power3.out",
   })
-  .from(
-    ".closing-section p",
-    {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      ease: "power3.out",
-    },
-    "-=0.6"
-  );
+  .to(".closing-subtitle", {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  }, "-=0.5")
+  .to(".closing-stats", {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  }, "-=0.4")
+  .to(".closing-ctas", {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "back.out(1.2)",
+  }, "-=0.3")
+  .to(".closing-quote", {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.8,
+    ease: "power3.out",
+  }, "-=0.2");
 }
