@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Triaga</title>
-    <link
-      rel="shortcut icon"
-      type="image/jpg"
-      href="./assets/SITE_150X150[1].jpg"
-    />
+    <link rel="shortcut icon" type="image/jpg" href="./assets/SITE_150X150[1].jpg" />
+
     <meta name="theme-color" content="#6659b0" />
+    <meta name="description" content="Agência Triaga. Branding Experience, estratégia cultural e produção de eventos que transformam marcas em cultura.">
+
+    <meta property="og:title" content="Triaga | Branding Experience">
+    <meta property="og:description" content="Criamos experiências que transformam marcas em cultura.">
+    <meta property="og:image" content="https://agenciatriaga.com.br/assets/SITE_150X150[1].jpg">
+    <meta property="og:url" content="https://agenciatriaga.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Triaga">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Triaga | Branding Experience">
+    <meta name="twitter:description" content="Criamos experiências que transformam marcas em cultura.">
+    <meta name="twitter:image" content="https://agenciatriaga.com.br/assets/SITE_150X150[1].jpg">
+    <meta name="twitter:url" content="https://agenciatriaga.com.br/">
+    <meta name="twitter:site" content="@agenciatriaga">
+    <meta name="twitter:creator" content="@agenciatriaga">
+
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
@@ -28,10 +42,10 @@
 
         <nav class="nav">
           <a class="link main" href="#hero">Home</a>
-          <a class="link" href="./pages/manifesto/index.html">Manifesto</a>
-          <a class="link" href="./pages/servicos/index.html">Serviços</a>
-          <a class="link" href="./pages/impacto/index.html">Impacto</a>
-          <a class="link" href="./pages/projetos/index.html">Projetos</a>
+          <a class="link" href="./manifesto/index.html">Manifesto</a>
+          <a class="link" href="./servicos/index.html">Serviços</a>
+          <a class="link" href="./impacto/index.html">Impacto</a>
+          <a class="link" href="./projetos/index.html">Projetos</a>
           <a href="#contato" class="btn-contact">Contato</a>
         </nav>
       </div>
@@ -334,7 +348,7 @@
               Um ecossistema premium dedicado ao Hip Hop, Funk e Pop, elevando a
               cultura urbana ao topo sem perder a raiz.
             </p>
-            <a href="#" class="project-link">
+            <a href="./pages/privacidade/projeto-em-desenvolvimento.html" class="project-link">
               Explorar projeto
               <svg
                 width="16"
@@ -364,7 +378,7 @@
               Comunidade de educação, tecnologia e negócios, conectando líderes
               da nova economia.
             </p>
-            <a href="#" class="project-link">
+            <a href="./pages/privacidade/projeto-em-desenvolvimento.html" class="project-link">
               Explorar projeto
               <svg
                 width="16"
@@ -619,17 +633,17 @@
 
         <div class="closing-stats">
           <div class="closing-stat">
-            <span class="stat-value">50+</span>
+            <span class="stat-value" data-target="30">0</span>
             <span class="stat-label">Marcas</span>
           </div>
           <div class="stat-divider"></div>
           <div class="closing-stat">
-            <span class="stat-value">1000+</span>
+            <span class="stat-value" data-target="1000">0</span>
             <span class="stat-label">Eventos</span>
           </div>
           <div class="stat-divider"></div>
           <div class="closing-stat">
-            <span class="stat-value">4</span>
+            <span class="stat-value" data-target="4">0</span>
             <span class="stat-label">Anos</span>
           </div>
         </div>
@@ -823,10 +837,10 @@
         <!-- Navegação -->
         <div class="footer-column">
           <h4>Navegação</h4>
-          <a href="./pages/manifesto/index.html">Manifesto</a>
-          <a href="./pages/servicos/index.html">Serviços</a>
-          <a href="./pages/projetos/index.html">Projetos</a>
-          <a href="./pages/impacto/index.html">Impacto</a>
+          <a href="./manifesto/index.html">Manifesto</a>
+          <a href="./servicos/index.html">Serviços</a>
+          <a href="./projetos/index.html">Projetos</a>
+          <a href="./impacto/index.html">Impacto</a>
         </div>
 
         <!-- Contato -->
@@ -843,7 +857,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2L8.1 9.1a16 16 0 0 0 6 6l.8-.8a2 2 0 0 1 2-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/>
             </svg>
-            <span>(21) 9854-7215</span>
+            <span>(21) 98547-2151</span>
           </a>
           <div class="footer-location">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -921,7 +935,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>©Triaga. Todos os direitos reservados.</p>
+        <p>© <span id="year"></span> Triaga.</p>
+        <a href="./privacidade/politica-de-privacidade.html">Política de Privacidade</a>
       </div>
     </footer>
 

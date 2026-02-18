@@ -4,6 +4,7 @@ import { whatsappForm } from './components/contact/contact.js';
 import { pageHeroAnimation } from './components/banner/banner.js';
 import { closingSectionAnimation } from './components/closing/closing.js';
 import { essenceSectionAnimation } from './components/essence/essence.js';
+import { footerScript } from './components/footer/footer.js';
 
 function dividerAnimation() {
     gsap.from(".divider-gradient", {
@@ -26,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
   closingSectionAnimation();
   essenceSectionAnimation();
   dividerAnimation();
+  footerScript();
 });
