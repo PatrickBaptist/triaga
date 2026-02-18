@@ -54,11 +54,10 @@
 }
 
 .logo-text:hover {
-  opacity: 0.8; /* 👈 NOVO */
-  transform: translateY(-1px); /* 👈 NOVO - micro-interação */
+  opacity: 0.8;
+  transform: translateY(-1px);
 }
 
-/* Ponto do "i" verde */
 .logo-text .i-dot {
   position: relative;
   color: #ffffff;
@@ -68,7 +67,7 @@
   content: "";
   position: absolute;
   top: 0.06em;
-  left: 55%;
+  left: 57%;
   transform: translateX(-50%);
   width: 0.23em;
   height: 0.23em;
@@ -98,8 +97,8 @@
 }
 
 .nav .link.active {
-  opacity: 1; /* 👈 NOVO */
-  font-weight: 600; /* 👈 NOVO */
+  opacity: 1;
+  font-weight: 600;
 }
 
 .nav .link::after {
