@@ -116,6 +116,23 @@ function projectsSectionAnimation() {
   }, "-=0.4");
 }
 
+window.addEventListener('scroll', () => {
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  if (scrollIndicator) {
+    if (window.scrollY > 100) {
+      gsap.to(scrollIndicator, {
+        autoAlpha: 0,
+        duration: 0.3
+      });
+    } else {
+      gsap.to(scrollIndicator, {
+        autoAlpha: 0.6,
+        duration: 0.3
+      });
+    }
+  }
+});
+
 document.addEventListener('DOMContentLoaded',  () => {
   initHeroStats();
   methodSectionAnimation();

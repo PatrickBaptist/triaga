@@ -1,42 +1,47 @@
 /* =====================
-   MANIFESTO – BASE
+   MANIFESTO SECTION
 ===================== */
 
 .manifesto-section {
   padding: 10rem 2rem 8rem;
-  display: flex;
-  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .manifesto-content {
   max-width: 820px;
 }
 
-/* =====================
-   TÍTULO
-===================== */
-
-.manifesto-section .section-title {
+/* Título específico do manifesto */
+.manifesto-title {
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  color: #a38bff;
+  position: relative;
+  display: inline-block;
 }
 
-/* =====================
-   KICKER
-===================== */
+.manifesto-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #48dacb, transparent);
+  border-radius: 999px;
+}
 
+/* Kicker */
 .manifesto-kicker {
   font-size: 1rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #48dacb;
   margin-bottom: 3.5rem;
+  font-weight: 600;
 }
 
-/* =====================
-   TEXTO DO MANIFESTO
-===================== */
-
+/* Texto do Manifesto */
 .manifesto-text {
   display: flex;
   flex-direction: column;
@@ -50,7 +55,7 @@
   max-width: 720px;
 }
 
-/* Frases de impacto */
+/* Primeira frase (impacto) */
 .manifesto-text p:first-child {
   font-size: 1.5rem;
   font-weight: 600;
@@ -59,9 +64,9 @@
 
 /* Destaque central */
 .manifesto-highlight {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #ffffff;
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
   position: relative;
   padding-left: 1.8rem;
 }
@@ -73,81 +78,121 @@
   top: 0.3rem;
   width: 4px;
   height: 80%;
-  background: linear-gradient(
-    180deg,
-    #6659b0,
-    #48dacb
-  );
+  background: linear-gradient(180deg, #6659b0, #48dacb);
   border-radius: 4px;
 }
 
 /* =====================
-   PURPOSE
+   PURPOSE SECTION
 ===================== */
 
 .purpose-section {
   padding: 8rem 2rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.purpose-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 2rem;
+.purpose-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título do Propósito */
+.purpose-title {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
   color: #a38bff;
   position: relative;
   display: inline-block;
-  padding-bottom: 0.6rem;
 }
 
-.purpose-section h2::after {
+.purpose-title::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1rem;
+  width: 80px;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    #48dacb,
-    transparent
-  );
+  background: linear-gradient(90deg, #48dacb, #6659b0);
   border-radius: 999px;
 }
 
-.purpose-section p {
-  font-size: 1.15rem;
+/* Texto do Propósito */
+.purpose-text {
+  font-size: 1.2rem;
   line-height: 1.85;
   color: rgba(255, 255, 255, 0.8);
-  max-width: 760px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* =====================
-   DESKTOP SCALE MODE
+   RESPONSIVE
 ===================== */
 
-@media (min-width: 1200px) {
-
+@media (max-width: 768px) {
   .manifesto-section {
-    padding-top: 14rem;
-    padding-bottom: 12rem;
+    padding: 4rem 1.5rem 3rem;
   }
 
-  .manifesto-section .section-title {
-    font-size: 4rem;
-    letter-spacing: -1.8px;
+  .manifesto-title {
+    font-size: 2.2rem;
   }
 
   .manifesto-kicker {
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .manifesto-text {
+    gap: 1.8rem;
+  }
+
+  .manifesto-text p {
     font-size: 1.05rem;
+  }
+
+  .manifesto-text p:first-child {
+    font-size: 1.3rem;
+  }
+
+  .manifesto-highlight {
+    font-size: 1.35rem !important;
+    padding-left: 1.5rem;
+  }
+
+  .purpose-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .purpose-title {
+    font-size: 2rem;
+  }
+
+  .purpose-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .manifesto-section {
+    padding: 14rem 2rem 12rem;
+  }
+
+  .manifesto-title {
+    font-size: 4rem;
+    letter-spacing: -1.5px;
+  }
+
+  .manifesto-kicker {
+    font-size: 1.1rem;
   }
 
   .manifesto-text p {
     font-size: 1.35rem;
-    max-width: 760px;
+    max-width: 800px;
   }
 
   .manifesto-text p:first-child {
@@ -155,20 +200,30 @@
   }
 
   .manifesto-highlight {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
-  .purpose-section h2 {
-    font-size: 3.4rem;
+  .purpose-section {
+    padding: 10rem 2rem;
   }
 
-  .purpose-section p {
-    font-size: 1.25rem;
+  .purpose-title {
+    font-size: 3.6rem;
+    letter-spacing: -1.5px;
+  }
+
+  .purpose-text {
+    font-size: 1.3rem;
+    max-width: 900px;
   }
 }
 
-@media (max-width: 768px) {
-  .manifesto-section {
-    padding: 3rem 2rem 1rem 2rem; 
+@media (min-width: 1600px) {
+  .page-title {
+    font-size: 7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
   }
 }
