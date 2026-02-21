@@ -131,6 +131,16 @@
   margin-top: 1rem;
   padding: 1.2rem 3rem;
   font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  color: #ffffff;
+  background: var(--primary-gradient);
+}
+
+.page-hero .cta-button:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(72, 218, 203, 0.35);
 }
 
 .page-hero .cta-button svg {
