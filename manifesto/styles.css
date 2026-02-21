@@ -165,17 +165,6 @@
   margin-top: 2rem;
 }
 
-.purpose-bg-glow {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  bottom: -200px;
-  right: -150px;
-  background: radial-gradient(circle, rgba(26, 248, 226, 0.1), transparent 70%);
-  filter: blur(120px);
-  z-index: 0;
-}
-
 /* =====================
    RESPONSIVE
 ===================== */

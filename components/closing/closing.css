@@ -73,6 +73,10 @@
   margin-bottom: 3rem;
 }
 
+.closing-note {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* =====================
    MINI STATS - NOVO
 ===================== */
