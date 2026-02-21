@@ -4,12 +4,13 @@
 
 .manifesto-section {
   padding: 10rem 2rem 8rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .manifesto-content {
   max-width: 820px;
+  margin: 0 auto;
 }
 
 /* Título específico do manifesto */
@@ -57,18 +58,20 @@
 
 /* Primeira frase (impacto) */
 .manifesto-text p:first-child {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
   color: #ffffff;
 }
 
 /* Destaque central */
 .manifesto-highlight {
-  font-size: 1.6rem !important;
-  font-weight: 600 !important;
-  color: #ffffff !important;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-weight: 600;
+  color: #ffffff;
   position: relative;
   padding-left: 1.8rem;
+  margin: 1rem 0;
 }
 
 .manifesto-highlight::before {
@@ -82,50 +85,95 @@
   border-radius: 4px;
 }
 
+.manifesto-bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(72,218,203,0.12), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.manifesto-bg-glow-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(102,89,176,0.12), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.manifesto-content {
+  position: relative;
+  z-index: 1;
+}
+
 /* =====================
    PURPOSE SECTION
 ===================== */
-
 .purpose-section {
-  padding: 8rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+  padding: 10rem 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .purpose-content {
-  max-width: 900px;
+  max-width: 680px;
   margin: 0 auto;
-}
-
-/* Título do Propósito */
-.purpose-title {
-  font-size: 2.8rem;
-  margin-bottom: 2.5rem;
-  color: #a38bff;
   position: relative;
-  display: inline-block;
+  z-index: 1;
 }
 
-.purpose-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -1rem;
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #48dacb, #6659b0);
-  border-radius: 999px;
+.purpose-kicker {
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #48dacb;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
-/* Texto do Propósito */
+.purpose-title {
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  line-height: 1.1;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
 .purpose-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.purpose-text p {
   font-size: 1.2rem;
-  line-height: 1.85;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 800px;
-  margin: 0 auto;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.purpose-highlight {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+.purpose-bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(26, 248, 226, 0.1), transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
 }
 
 /* =====================
@@ -159,7 +207,7 @@
   }
 
   .manifesto-highlight {
-    font-size: 1.35rem !important;
+    font-size: 1.35rem;
     padding-left: 1.5rem;
   }
 
@@ -200,7 +248,7 @@
   }
 
   .manifesto-highlight {
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 
   .purpose-section {
@@ -215,15 +263,5 @@
   .purpose-text {
     font-size: 1.3rem;
     max-width: 900px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .page-title {
-    font-size: 7rem;
-  }
-
-  .hero-subtitle {
-    font-size: 2rem;
   }
 }

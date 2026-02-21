@@ -1,38 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set([
-  ".hero-cta",
-], {
-  autoAlpha: 0,
-  y: 30
-});
-
-// =====================
-// HERO ANIMATION
-// =====================
-
-gsap.timeline({
-  delay: 0.3
-})
-.to(".page-title", {
-  autoAlpha: 1,
-  y: 0,
-  duration: 1.2,
-  ease: "power4.out"
-}, "-=0.3")
-.to(".hero-subtitle", {
-  autoAlpha: 1,
-  y: 0,
-  duration: 0.8,
-  ease: "power3.out"
-}, "-=0.5")
-.to(".hero-cta", {
-  autoAlpha: 1,
-  y: 0,
-  duration: 0.8,
-  ease: "back.out(1.4)"
-}, "-=0.4");
-
 // =====================
 // MANIFESTO SECTION
 // =====================
